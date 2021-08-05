@@ -1,0 +1,27 @@
+:spring_version: current
+:spring_boot_version: 2.2.1.RELEASE
+:toc:
+:icons: font
+:source-highlighter: prettify
+:project_id: gs-accessing-data-mysql
+
+This is work in progress.
+
+Spring application connected to a
+MySQL Database (as opposed to an in-memory, embedded database, which most of the other
+guides and many sample applications use). It uses Spring Data JPA to access the database.
+
+== What You Will Build
+
+You will create a MySQL database, build a Spring application, and connect it to the newly
+created database.
+
+https://spring.io/guides/gs/accessing-data-mysql/
+
+Angular on the front-end.
+
+== What You Need
+
+* https://dev.mysql.com/downloads/[MySQL] version 5.6 or better.
+
+:java_version: 1.8
