@@ -24,4 +24,19 @@ Angular on the front-end.
 
 * https://dev.mysql.com/downloads/[MySQL] version 5.6 or better.
 
-:java_version: 1.8
+Create the Database
+
+Open a terminal (command prompt in Microsoft Windows) and open a MySQL client as a user who can create new users.
+
+For example, on a Linux system, use the following command;
+
+$ sudo mysql --password
+
+Note
+	This connects to MySQL as root and allows access to the user from all hosts. This is not the recommended way for a production server.
+
+To create a new database, run the following commands at the mysql prompt:
+
+mysql> create database my_db; -- Creates the new database
+mysql> create user 'myuser'@'%' identified by 'myuser'; -- Creates the user
+mysql> grant all on my_db.* to 'myuser'@'%'; -- Gives all privileges to the new user on the newly created database
