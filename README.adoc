@@ -30,7 +30,11 @@ Open a terminal (command prompt in Microsoft Windows) and open a MySQL client as
 
 For example, on a Linux system, use the following command;
 
+$ sudo service mysql start
+
 $ sudo mysql --password
+
+$ <enter>
 
 Note
 	This connects to MySQL as root and allows access to the user from all hosts. This is not the recommended way for a production server.
@@ -38,5 +42,7 @@ Note
 To create a new database, run the following commands at the mysql prompt:
 
 mysql> create database my_db; -- Creates the new database
-mysql> create user 'myuser'@'%' identified by 'myuser'; -- Creates the user
-mysql> grant all on my_db.* to 'myuser'@'%'; -- Gives all privileges to the new user on the newly created database
+
+mysql> create user 'my_user'@'%' identified by 'my_user'; -- Creates the user
+
+mysql> grant all on my_db.* to 'my_user'@'%'; -- Gives all privileges to the new user on the newly created database
