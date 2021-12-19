@@ -13,14 +13,45 @@ Spring application connected to a MySQL Database. It uses Spring Data JPA to acc
 
 https://dev.mysql.com/downloads/[MySQL] version 5.6 or better.
 
-Create the Database locally:
+Open the terminal and open a MySQL client as a user who can create new users. For example, on a Linux system, use the following command:
 
-Open the terminal and open a MySQL client as a user who can create new users. For example, on a Linux system, use the following command;
-
+====
+[source,sh]
+----
 $ sudo service mysql start
-
 $ sudo mysql --password
-
 $ <enter>
+----
+====
 
 Execute db and user creation script found at spring/app/script.sql
+
+To start the app make sure mysql service is running and execute:
+
+====
+[source,sh]
+----
+cd spring/app
+./gradlew BootRun
+----
+====
+
+== Test the Application
+
+The following curl command adds a user:
+
+====
+[source,sh]
+----
+$ curl localhost:8080/demo/add -d name=First -d email=someemail@someemailprovider.com
+----
+====
+
+The following command shows all the users:
+
+====
+[source,sh]
+----
+$ curl 'localhost:8080/demo/all'
+----
+====
