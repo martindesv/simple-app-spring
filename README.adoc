@@ -7,6 +7,8 @@
 
 == Project Description
 
+Work in progress.
+
 Spring application connected to a MySQL Database. It uses Spring Data JPA to access the database. Angular on the front-end.
 
 == What You Need
