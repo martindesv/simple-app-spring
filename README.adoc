@@ -1,6 +1,7 @@
 :spring_version: current
 :spring_boot_version: 2.2.1.RELEASE
 :icons: font
+:toc:
 :source-highlighter: prettify
 :project_id: gs-accessing-data-mysql
 
