@@ -1,34 +1,20 @@
 :spring_version: current
 :spring_boot_version: 2.2.1.RELEASE
-:toc:
 :icons: font
 :source-highlighter: prettify
 :project_id: gs-accessing-data-mysql
 
-This is work in progress.
+== Project Description
 
-Spring application connected to a
-MySQL Database (as opposed to an in-memory, embedded database, which most of the other
-guides and many sample applications use). It uses Spring Data JPA to access the database.
-
-== What You Will Build
-
-You will create a MySQL database, build a Spring application, and connect it to the newly
-created database.
-
-https://spring.io/guides/gs/accessing-data-mysql/
-
-Angular on the front-end.
+Spring application connected to a MySQL Database. It uses Spring Data JPA to access the database. Angular on the front-end.
 
 == What You Need
 
-* https://dev.mysql.com/downloads/[MySQL] version 5.6 or better.
+https://dev.mysql.com/downloads/[MySQL] version 5.6 or better.
 
-Create the Database
+Create the Database locally:
 
-Open a terminal (command prompt in Microsoft Windows) and open a MySQL client as a user who can create new users.
-
-For example, on a Linux system, use the following command;
+Open the terminal and open a MySQL client as a user who can create new users. For example, on a Linux system, use the following command;
 
 $ sudo service mysql start
 
@@ -36,13 +22,4 @@ $ sudo mysql --password
 
 $ <enter>
 
-Note
-	This connects to MySQL as root and allows access to the user from all hosts. This is not the recommended way for a production server.
-
-To create a new database, run the following commands at the mysql prompt:
-
-mysql> create database my_db; -- Creates the new database
-
-mysql> create user 'my_user'@'%' identified by 'my_user'; -- Creates the user
-
-mysql> grant all on my_db.* to 'my_user'@'%'; -- Gives all privileges to the new user on the newly created database
+Execute db and user creation script found at spring/app/script.sql
